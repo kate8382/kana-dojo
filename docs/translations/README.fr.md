@@ -1,5 +1,7 @@
 <div id="top"></div>
 
+<a href="#about-kanadojo">À propos de KanaDojo</a> | <a href="#screenshots">Captures d'écran</a> | <a href="#ui-design-philosophy">Philosophie UI &amp; Design</a> | <a href="#tech-stack">Stack Technique</a> | <a href="#getting-started">Démarrage</a> | <a href="#project-structure">Structure du Projet</a> | <a href="#contributing">Contribuer</a> | <a href="#license">Licence</a> | <a href="#acknowledgments">Remerciements</a> | <a href="#contact-links">Contact &amp; Liens</a> 
+
 # KanaDojo かな道場
 
 <div align="center">
@@ -16,6 +18,7 @@
 
 </div>
 
+<a id="about-kanadojo"></a>
 ## 📖 À propos de KanaDojo
 
 KanaDojo est une plateforme web d'apprentissage du japonais qui rend l'apprentissage des Hiragana, Katakana, Kanji et du vocabulaire amusant et intuitif. Construit avec un accent sur l'esthétique, la personnalisation et l'apprentissage efficace, KanaDojo offre un environnement d'entraînement immersif pour les apprenants de la langue japonaise de tous niveaux.
@@ -60,6 +63,7 @@ Chaque dojo propose quatre modes d'entraînement engageants pour renforcer l'app
 - Interface propre et minimaliste qui vous garde concentré sur l'apprentissage
 - Animations et transitions fluides propulsées par Framer Motion
 
+<a id="screenshots"></a>
 ## 🖼️ Captures d'écran
 
 <div align="center">
@@ -82,6 +86,7 @@ Chaque dojo propose quatre modes d'entraînement engageants pour renforcer l'app
 
 </div>
 
+<a id="ui-design-philosophy"></a>
 ## 🎨 Philosophie UI & Design
 
 KanaDojo adopte une **esthétique minimaliste** combinée à une **flexibilité maximale**. La philosophie de design se centre sur :
@@ -114,6 +119,7 @@ KanaDojo adopte une **esthétique minimaliste** combinée à une **flexibilité 
 - Distinction claire entre les caractères similaires
 - Aperçus des polices avec des exemples de texte japonais réels
 
+<a id="tech-stack"></a>
 ## 🛠️ Stack Technique
 
 KanaDojo est construit avec des technologies web modernes pour une performance et une expérience développeur optimales :
@@ -156,6 +162,7 @@ KanaDojo est construit avec des technologies web modernes pour une performance e
 - **[@vercel/analytics](https://vercel.com/analytics)** - Analytics web
 - **[@vercel/speed-insights](https://vercel.com/docs/speed-insights)** - Monitoring de performance
 
+<a id="getting-started"></a>
 ## 🚀 Démarrage
 
 ### Prérequis
@@ -310,47 +317,48 @@ Ou simplement exécuter sur un port différent :
 PORT=3001 npm run dev
 ```
 
+<a id="project-structure"></a>
 ## 📁 Structure du Projet
 
 ```
 kanadojo/
-├── app/                          # Pages Next.js App Router
-│   ├── kana/                    # Pages du dojo Kana
+├── app/                        # Pages Next.js App Router
+│   ├── kana/                   # Pages du dojo Kana
 │   │   └── train/[gameMode]/   # Pages d'entraînement pour chaque mode
-│   ├── kanji/                   # Pages du dojo Kanji
+│   ├── kanji/                  # Pages du dojo Kanji
 │   │   └── train/[gameMode]/
-│   ├── vocabulary/              # Pages du dojo Vocabulaire
+│   ├── vocabulary/             # Pages du dojo Vocabulaire
 │   │   └── train/[gameMode]/
-│   ├── preferences/             # Page de paramètres et personnalisation
-│   ├── academy/                 # Contenu éducatif
-│   ├── layout.tsx               # Layout racine avec providers
-│   └── page.tsx                 # Page d'accueil
+│   ├── preferences/            # Page de paramètres et personnalisation
+│   ├── academy/                # Contenu éducatif
+│   ├── layout.tsx              # Layout racine avec providers
+│   └── page.tsx                # Page d'accueil
 │
-├── components/                   # Composants React
-│   ├── Dojo/                    # Composants spécifiques à l'entraînement
+├── components/                 # Composants React
+│   ├── Dojo/                   # Composants spécifiques à l'entraînement
 │   │   ├── Kana/               # Sélection et cartes Kana
 │   │   ├── Kanji/              # Sélection et cartes Kanji
 │   │   └── Vocab/              # Sélection et cartes Vocabulaire
-│   ├── reusable/                # Composants partagés
+│   ├── reusable/               # Composants partagés
 │   │   ├── Menu/               # Composants de navigation et menu
 │   │   └── ...                 # Autres composants réutilisables
-│   ├── Settings/                # Composants de préférences
-│   └── ui/                      # Composants shadcn/ui
+│   ├── Settings/               # Composants de préférences
+│   └── ui/                     # Composants shadcn/ui
 │
-├── lib/                         # Utilitaires et fonctions helper
-│   ├── hooks/                   # Hooks React personnalisés
+├── lib/                        # Utilitaires et fonctions helper
+│   ├── hooks/                  # Hooks React personnalisés
 │   │   ├── useAudio.ts         # Hooks de retour audio
 │   │   └── ...
-│   ├── interfaces.ts            # Interfaces TypeScript
-│   └── utils.ts                 # Fonctions utilitaires
+│   ├── interfaces.ts           # Interfaces TypeScript
+│   └── utils.ts                # Fonctions utilitaires
 │
-├── store/                       # Gestion d'état Zustand
+├── store/                      # Gestion d'état Zustand
 │   ├── useKanaKanjiStore.ts    # État de sélection Kana/Kanji
 │   ├── useVocabStore.ts        # État de sélection Vocabulaire
 │   ├── useStatsStore.ts        # Statistiques et progression
 │   └── useThemeStore.ts        # Thème et préférences
 │
-├── static/                      # Données et configuration statiques
+├── static/                     # Données et configuration statiques
 │   ├── kana.ts                 # Données des caractères Kana
 │   ├── kanji/                  # Données Kanji par niveau JLPT
 │   ├── vocab/                  # Données de vocabulaire
@@ -358,7 +366,7 @@ kanadojo/
 │   ├── fonts.ts                # Configurations des polices
 │   └── info.tsx                # Contenu informatif
 │
-├── public/                      # Assets statiques
+├── public/                     # Assets statiques
 │   ├── sounds/                 # Fichiers audio
 │   └── wallpapers/             # Images de fond
 ```
@@ -375,6 +383,7 @@ kanadojo/
 4. Les statistiques sont suivies et persistées dans `useStatsStore`
 5. Les préférences utilisateur sont sauvegardées dans `useThemeStore` avec persistence localStorage
 
+<a id="contributing"></a>
 ## 🤝 Contribuer
 
 Les contributions sont les bienvenues ! KanaDojo est un projet open-source construit par la communauté, pour la communauté. Consultez [CONTRIBUTING.md](CONTRIBUTING.md) pour plus d'informations détaillées sur la façon de contribuer.
@@ -395,29 +404,19 @@ Les contributions sont les bienvenues ! KanaDojo est un projet open-source const
 - Mettez à jour la documentation si nécessaire
 - Gardez les composants concentrés et réutilisables
 
+<a id="license"></a>
 ## 📄 Licence
 
 Ce projet est sous licence AGPL 3.0 - voir le fichier [LICENSE.md](LICENSE.md) pour plus de détails.
 
+<a id="acknowledgments"></a>
 ## 🙏 Remerciements
 
 - Données de langue japonaise et informations sur les caractères
 - Communauté open-source pour les outils et bibliothèques incroyables
 - Tous les contributeurs qui aident à améliorer KanaDojo
 
-## Traductions
-
-KanaDojo est disponible en plusieurs langues grâce aux contributions de la communauté :
-
-- [English (par défaut)](../../README.md)
-- [Español](README.es.md)
-- Français (ce document)
-- [Deutsch](README.de.md)
-- [Português](README.pt-br.md)
-- [中文（简体）](README.zh-CN.md)
-- [中文（繁體）](README.zh-tw.md)
-- [हिन्दी](README.hin.md)
-
+<a id="contact-links"></a>
 ## 📞 Contact & Liens
 
 - **Site Web** : [kanadojo.com](https://kanadojo.com)
