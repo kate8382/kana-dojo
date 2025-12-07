@@ -8,7 +8,7 @@ import clsx from 'clsx';
 import { useClick } from '@/shared/hooks/useAudio';
 import { useShallow } from 'zustand/react/shallow';
 import { Link } from '@/core/i18n/routing';
-import { ActionButton } from '@/shared/components/ui/ActionButton';
+// import { ActionButton } from '@/shared/components/ui/ActionButton';
 
 interface GameModesProps {
   isOpen: boolean;
@@ -102,7 +102,7 @@ const GameModes = ({ isOpen, onClose, currentDojo }: GameModesProps) => {
   if (!isOpen) return null;
 
   return (
-    <div className='fixed inset-0 z-50 bg-[var(--background-color)]'>
+    <div className='fixed inset-0 z-[70] bg-[var(--background-color)]'>
       <div className='min-h-[100dvh] flex flex-col items-center justify-center p-4'>
         <div className='max-w-lg w-full space-y-4'>
           {/* Header */}
